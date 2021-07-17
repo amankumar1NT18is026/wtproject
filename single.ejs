@@ -3,85 +3,97 @@
 <div class="container">
 
 <%- include('../base/messages') -%>
-  
+        
             <div class="row mb-4">
                     <div class="col-md-12" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
                             <nav class="navbar navbar-expand-lg navbar-white">
                                     <ol class="navbar-nav">
                                         <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
-                                        <li class="breadcrumb-item"><a href="/bill/all">Bills</a></li>
+                                        <li class="breadcrumb-item"><a href="/waiter/all">Waiters</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">More details</li>
                                     </ol>
                                     <div class="collapse navbar-collapse" id="navbarNav">
                                       <ul class="navbar-nav ml-auto">
                                             <li class="nav-item">
-                                              <a class="nav-link btn btn-primary btn-sm mr-2 text-light" href="/bill/all">All</a>
+                                              <a class="nav-link btn btn-primary btn-sm mr-2 text-light" href="/waiter/all">All</a>
                                             </li>
                                             <li class="nav-item">
-                                              <a class="nav-link btn btn-primary btn-sm mr-2 text-light" href="/bill/new">New</a>
+                                              <a class="nav-link btn btn-primary btn-sm mr-2 text-light" href="/waiter/new">New</a>
                                             </li>
                                         </ul>
                                     </div>
                               </nav>
                         </div>
                 </div>
-
-
+        
                 <div class="row w-75 float-left">
-                    <div class="col-md-12 p-4" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
-                      <h2 class="display-5 text-muted">More details</h2>
-                      <hr>
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <p class="text-muted float-left w-25">First name</p>
-                            <p class="text-muted float-left"><%=customer.Fname %></p>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <p class="text-muted float-left w-25">Last name</p>
-                            <p class="text-muted float-left"><%=customer.LName %></p>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <p class="text-muted float-left w-25">Email</p>
-                            <p class="text-muted float-left"><%=customer.Email %></p>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <p class="text-muted float-left w-25">Sub Total</p>
-                            <p class="text-muted float-left"><%=bill.Sub_Total %>$</p>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <p class="text-muted float-left w-25">Vat</p>
-                            <p class="text-muted float-left"><%=bill.Vat %>$</p>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-sm-12">
-                            <p class="text-muted float-left w-25">Total</p>
-                            <p class="text-muted float-left"><%=bill.Total %>$</p>
-                          </div>
-                      </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                          <p class="text-muted float-left w-25">Created at</p>
-                          <p class="text-muted float-left"><%=bill.created_at.toDateString()%></p>
+                        <div class="col-md-12 p-4" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+                          <h2 class="display-5 text-muted">More details</h2>
+                          <hr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">First Name</p>
+                              <p class="text-muted float-left"><%=waiter.Fname %></p>
+                            </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Last Name</p>
+                              <p class="text-muted float-left"><%=waiter.LName %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Email</p>
+                              <p class="text-muted float-left"><%=waiter.Email %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">City</p>
+                              <p class="text-muted float-left"><%=waiter.City %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Postcode</p>
+                              <p class="text-muted float-left"><%=waiter.Postcode %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Salary</p>
+                              <p class="text-muted float-left"><%=waiter.Salary %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Sex</p>
+                              <p class="text-muted float-left"><%=waiter.Sex %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Birthdate</p>
+                              <p class="text-muted float-left"><%=waiter.Birthdate %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                              <p class="text-muted float-left w-25">Created at</p>
+                              <p class="text-muted float-left"><%=waiter.created_at.toDateString()%></p>
+                            </div>
+                        </div>
         </div>
     </div>
 
         <div class="row w-25 float-right">
         <div class="col-md-12 p-4 ml-auto" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+
             <div class="card" style="width: 100%;border:none;">
-                <img src="/sys/bill.png" class="card-img-top" alt="...">
+                <img src="/sys/waiter.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <a href="<%= '/bill/edit/' + bill.id %>" class="btn btn-primary">Edit</a>
+                  <a href="<%= '/waiter/edit/' + waiter.id %>" class="btn btn-primary">Edit</a>
 
 
                   <div class="float-right">
@@ -98,10 +110,10 @@
                                 </button>
                               </div>
                               <div class="modal-body">
-                              <p class="display-5">This bill will be deleted</p>
+                              <p class="display-5">This waiter will be deleted</p>
       
-                        <form  action="/bill/delete" method="post">
-                          <input type="hidden" name="id" value="<%=bill.id%>">
+                        <form  action="/waiter/delete" method="post">
+                          <input type="hidden" name="id" value="<%=waiter.id%>">
                           <div class="form-group">
                             <button type="submit" class="btn btn-danger">Delete</button>
                           </div>
